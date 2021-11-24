@@ -1,5 +1,4 @@
-﻿class Student
-{
+﻿class Student {
     public string First { get; set; }
     public string Last { get; set; }
     public int ID { get; set; }
@@ -8,21 +7,17 @@
     public List<int> Scores;
 }
 
-class Teacher
-{
+class Teacher {
     public string First { get; set; }
     public string Last { get; set; }
     public int ID { get; set; }
     public string City { get; set; }
 }
 
-class DataTransformations
-{
-    static void Main()
-    {
-        // Create the first data source.
-        List<Student> students = new List<Student>()
-        {
+class DataTransformations {
+    static void Main() {
+
+        List<Student> students = new List<Student>() {
             new Student { First="Svetlana",
                 Last="Omelchenko",
                 ID=111,
@@ -44,8 +39,7 @@ class DataTransformations
         };
 
         // Create the second data source.
-        List<Teacher> teachers = new List<Teacher>()
-        {
+        List<Teacher> teachers = new List<Teacher>() {
             new Teacher { First="Ann", Last="Beebe", ID=945, City="Seattle" },
             new Teacher { First="Alex", Last="Robinson", ID=956, City="Redmond" },
             new Teacher { First="Michiyo", Last="Sato", ID=972, City="Tacoma" }
@@ -61,8 +55,7 @@ class DataTransformations
 
         Console.WriteLine("The following students and teachers live in Seattle:");
         // Execute the query.
-        foreach (var person in peopleInSeattle)
-        {
+        foreach (var person in peopleInSeattle) {
             Console.WriteLine(person);
         }
 
